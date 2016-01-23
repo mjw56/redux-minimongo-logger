@@ -73,7 +73,7 @@
       )(Counter);
 
       var createStoreWithMiddleware = Redux.applyMiddleware(
-        ReduxMongoLogger.mongoDbLogger
+        ReduxMongoLogger.mongoDbLogger({ foo: 'bar' })
       )(Redux.createStore);
 
       var store = createStoreWithMiddleware(counter);
