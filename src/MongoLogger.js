@@ -1,4 +1,17 @@
-export const mongoDbLogger = store => next => action => {
-  console.log('logged action', action);
-  return next(action);
+import minimongo from 'minimongo';
+
+export const mongoDbLogger = config => {
+  const LocalDb = minimongo.MemoryDb;
+
+  const db = new LocalDb();
+
+  const { collection = 'redux-logs' } = config;
+
+  db.addCollection(collection);
+
+  return store => next => action => {
+    db[collection].upsert(action, function() {
+        return next(action);
+    });
+  }
 }
