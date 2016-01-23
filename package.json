@@ -1,5 +1,5 @@
 {
-  "name": "grout",
+  "name": "redux-minimongo-logger",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -20,6 +20,7 @@
     "babel-loader": "^6.2.1",
     "babel-preset-es2015": "^6.3.13",
     "expect": "^1.13.4",
+    "minimongo": "^3.6.1",
     "webpack": "^1.12.11",
     "webpack-dev-server": "^1.14.1"
   }
