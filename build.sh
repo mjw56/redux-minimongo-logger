@@ -7,6 +7,8 @@ rm -rf dist-module/
 mkdir dist/
 mkdir dist-module/
 
+cp index.html ./dist
+
 babel index.js \
   --out-file dist/index.js
 
