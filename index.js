@@ -1,0 +1,1 @@
+export { mongoDbLogger } from './src/index';
