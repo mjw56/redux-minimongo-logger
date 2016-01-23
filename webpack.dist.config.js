@@ -7,7 +7,7 @@ module.exports = {
   output: {
     path: './dist/',
     filename: 'index.js',
-    library: 'Grout',
+    library: 'ReduxMongoLogger',
     libraryTarget: 'umd'
   },
   module: {
