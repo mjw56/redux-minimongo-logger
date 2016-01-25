@@ -1,6 +1,10 @@
 import minimongo from 'minimongo';
 
 export const mongoDbLogger = config => {
+  if (!config) {
+    config = {};
+  }
+
   const LocalDb = minimongo.MemoryDb;
 
   const db = new LocalDb();
